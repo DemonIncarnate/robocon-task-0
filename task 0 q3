@@ -1,0 +1,27 @@
+#Q3 simple logic of palindrome sequences
+
+from string import ascii_lowercase as abcd
+n=int(input())
+str=input()
+str1=[i for i in str.split()]
+
+a=97
+x = 0
+y=True
+for x in range(n//2):
+    if str1[x]==str1[n-x-1]:
+         pass
+    else:
+        print("false")
+        y=False
+        break
+if y:
+    for x in range (n//2-1):
+        if str1[x+1]==str1[x] or str1[x+1]==chr(ord(str1[x])+1):
+            pass
+        else:
+            print ("false")
+            y=False
+
+if y:
+    print("true")
