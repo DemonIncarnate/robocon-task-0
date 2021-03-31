@@ -1,0 +1,27 @@
+#Q4
+def rev(num):
+  rev_num = 0
+  while(num>0):
+    a = num%10
+    rev_num = rev_num*10 + a
+    num = num // 10
+  return rev_num
+
+
+N = int(input("please provide the no. of entries"))
+
+arr = []
+arr1= []
+for i in range(0,2*N):
+  l = int(input("enter values"))
+  arr.append(l)
+
+for i in range(0,2*N):
+  l = rev(arr[i])
+  arr1.append(l)
+
+for i in range(0,2*N-1,2):
+  l = arr1[i] + arr1[i+1]
+  x = rev(l)
+  print(x)
+
