@@ -40,9 +40,9 @@ for i in range(0,2*N-1,2):
   
 _______________________________________________________________________-  
   
-#Q2
+#Q2 using the logic that the square root of the odd composite number - a prime whole divided by 2 should be a perfect number
 import math
-
+#check weather the number is prime
 def is_prime(n):
     if n % 2 == 0:
         return False
@@ -71,3 +71,35 @@ while(n < 7000):
 
     n += 2
 print(arr)
+
+
+
+_________________________________________________________________________________________________
+#Q3 simple logic of palindrome sequences
+
+from string import ascii_lowercase as abcd
+n=int(input())
+str=input()
+str1=[i for i in str.split()]
+
+a=97
+x = 0
+y=True
+for x in range(n//2):
+    if str1[x]==str1[n-x-1]:
+         pass
+    else:
+        print("false")
+        y=False
+        break
+if y:
+    for x in range (n//2-1):
+        if str1[x+1]==str1[x] or str1[x+1]==chr(ord(str1[x])+1):
+            pass
+        else:
+            print ("false")
+            y=False
+
+if y:
+    print("true")
+  
