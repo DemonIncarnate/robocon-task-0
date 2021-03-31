@@ -1,0 +1,31 @@
+#Q2 using the logic that the square root of the odd composite number - a prime whole divided by 2 should be a perfect number
+import math
+#check weather the number is prime
+def is_prime(n):
+    if n % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(n**0.5+1),2):
+            if n % i == 0:
+                return False
+        return True
+n = 3
+primes = []
+x =2
+primes.append(x)
+arr = []
+
+while(n < 7000):
+    if is_prime(n):
+        primes.append(n)
+    else:
+        for i in primes:
+            if math.sqrt(((n-i)/2)) == int(math.sqrt(((n-i)/2))):
+              arr.append((n,i,int(math.sqrt(((n-i)/2)))))
+              break
+        else:
+            print(n)
+            break
+
+    n += 2
+print(arr)
