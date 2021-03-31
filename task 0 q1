@@ -1,1 +1,10 @@
+str = input()
+x = 0
+while str and x!=-1:
+  x=str.find("bot")
+  str=str[:x] + str[x+3: ]
+if str=="":
+  print("Yes/true")
+else:
+  print("No/false")
 
